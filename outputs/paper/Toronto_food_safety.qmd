@@ -4,7 +4,7 @@ title-block-banner: true
 author: Aaron Xiaozhou Liu
 date: today
 date-format: long
-abstract: "This paper focuses on the DineSafe dataset from OpenDataToronto to fully explore the food safety inspections that took place in Toronto. The use of temporal and geospatial analysis helps us to find the reason behind the seasonal trends, spatial patterns, and hotspots of non-compliance. It also gives us an idea of the current status of food safety in the city. We also compare inspection results by facility types, isolate factors determining compliance, monitor rating variation trend, and analyze inconsistencies between official information and public perception data. The results of our research provide various beneficiaries, including policy makers, officials of public health, and foodservice industry stakeholders, with useful information that can be used to improve food safety regulations and guarantee secure dining experiences to residents of Toronto."
+abstract: "This paper focuses on the DineSafe dataset from OpenDataToronto to explore the food safety inspections that took place in Toronto. The use of temporal and geospatial analysis helps us to find the reason behind the seasonal trends, spatial patterns, and hotspots of non-compliance. It also gives us an idea of the current status of food safety in the city. We also compare inspection results by facility types, isolate factors determining compliance, monitor rating variation trend, and analyze inconsistencies between official information and public perception data. The results of our research provide various beneficiaries, including policy makers, officials of public health, and foodservice industry stakeholders, with useful information that can be used to improve food safety regulations and guarantee secure dining experiences to residents of Toronto."
 format: pdf
 toc: true
 number-sections: true
@@ -13,7 +13,11 @@ bibliography: bibliography.bib
 
 \newpage
 ## Introduction
+Food safety is a crucial issue in the culinary scene of Toronto compared to other urban regions because it is a home to many restaurants that draw guests and local residents. While the diversity of restaurants in the city is indicative of it being a culturally luring place, concern with food quality and safety is also of equal significance. The food safety inspections, those are done by the officials of the Toronto Public Health department under DineSafe system, have great value as a tool of control over the compliance with health requirements and for protecting the public health. DineSafe represents one of the crucial strong points since the system works through OpenDataToronto which permits for students and researchers that want to learn the food environment of Toronto in more details to have access to such information.
 
+This study will investigate the DineSafe data set, mainly focusing on the temporal and spatial trends associated with food safety inspections in different neighborhoods in Toronto. Through studying the trends of food safety compliance across years and locations, we intend to detect the efficiency of existing food safety systems and point out the areas for improvements. Furthermore, we will dig into the factors that may affect the outcome of an inspection, like establishment type, size, and frequency of inspection giving the in-depth picture of the determinants of compliance within the city's food service industry.
+
+With the overarching goal of enhancing food safety standards and fostering transparency within Toronto's dining establishments, this research endeavors to provide evidence-based insights for policymakers, public health officials, and stakeholders. By analyzing the patterns emerging from DineSafe inspections, we aim to contribute to informed decision-making and the development of targeted interventions to address potential gaps in food safety regulation enforcement. Ultimately, our study seeks to promote a culture of accountability and consumer trust, ensuring that Toronto's vibrant culinary landscape remains a safe and enjoyable experience for all.
 \newpage
 ## Data
 
