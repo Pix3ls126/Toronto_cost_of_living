@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Downloads the data from OpenDataToronto
 # Author: Aaron Xiaozhou Liu
-# Date: April, 2024
+# Date: April 3, 2024
 # Contact: aaronxiaozhou.liu@mail.utoronto.ca
 # Prerequisites: None
 
@@ -11,7 +11,7 @@ library(tidyverse)
 
 #Getting the package
 pkg <- 
-  search_packages('Theft from Motor Vehicle')
+  search_packages('Dinesafe')
 
 #Getting the list of package IDs
 pkgs <- 
@@ -19,10 +19,11 @@ pkgs <-
 
 #Getting the desired dataset
 dataset <-
-  get_resource(pkgs[8:8,1:2]$id)
+  get_resource(pkgs[2:2,1:2]$id)
 
 #Saving the dataset
 write_csv(
   x = dataset,
-  file = "inputs/data/raw_Theft_from_Motor_Vehicle.csv"
+  file = "inputs/data/raw_DineSafe_data.csv"
 )
+
