@@ -36,5 +36,5 @@ DineSafe_data_Clean$Establishment_Street <- new_column
   
 write_csv(
   x = DineSafe_data_Clean,
-  file = "inputs/data/cleaned_DineSafe.csv"
+  file = "data/analysis_data/cleaned_DineSafe.csv"
 )

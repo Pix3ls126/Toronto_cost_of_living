@@ -24,6 +24,6 @@ dataset <-
 #Saving the dataset
 write_csv(
   x = dataset,
-  file = "inputs/data/raw_DineSafe_data.csv"
+  file = "data/raw_data/raw_DineSafe_data.csv"
 )
 
