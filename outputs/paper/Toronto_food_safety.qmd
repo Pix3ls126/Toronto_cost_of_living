@@ -23,6 +23,7 @@ With the overarching goal of enhancing food safety standards and fostering trans
 
 
 ### Data collection and cleaning
+All data collection and analysis was done using statistical computing and data visualization program R [@R] and Rstudio IDE [@RStudioR] to help streamline the workflow. The data used for this paper was found in the opendatatoronto library and downloaded using the R package opendatatoronto [@opendatatorontoR]. All the analysis was done using the R program and the following supporting packages tidyverse [@tidyverseR], Janitor [@JanitorR], dplyer [@dplyrR], ggplot2 [@ggplot2R], knitr [@knitrR], readr [@readrR], and here [@hereR]. We will dive into more detail about the data collection, cleaning, and analysis in the following sections of the paper.
 
 ## Results
 
