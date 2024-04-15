@@ -27,6 +27,13 @@ cleaned_DineSafe_data <- cleaned_DineSafe_data[cleaned_DineSafe_data$infraction_
 
 DineSafe_data_Clean <- cleaned_DineSafe_data[!is.na(cleaned_DineSafe_data$id), ]
 
+split_column <-
+  strsplit(DineSafe_data_Clean$establishment_address, " ")
+
+new_column <- sapply(split_column, function(x) paste(x[2], x[3], sep = " "))
+
+DineSafe_data_Clean$Establishment_Street <- new_column
+  
 write_csv(
   x = DineSafe_data_Clean,
   file = "inputs/data/cleaned_DineSafe.csv"

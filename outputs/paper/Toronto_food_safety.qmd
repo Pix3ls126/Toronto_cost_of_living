@@ -2,6 +2,7 @@
 title: "Analyzing the Insights Behind Food Safety Trends in Toronto"
 title-block-banner: true
 author: Aaron Xiaozhou Liu
+thanks: "Code and data are available at https://github.com/Pix3ls126/Toronto_food_safety"
 date: today
 date-format: long
 abstract: "This paper focuses on the DineSafe dataset from OpenDataToronto to explore the food safety inspections that took place in Toronto. The use of temporal and geospatial analysis helps us to find the reason behind the seasonal trends, spatial patterns, and hotspots of non-compliance. It also gives us an idea of the current status of food safety in the city. We also compare inspection results by facility types, isolate factors determining compliance, monitor rating variation trend, and analyze inconsistencies between official information and public perception data. The results of our research provide various beneficiaries, including policy makers, officials of public health, and foodservice industry stakeholders, with useful information that can be used to improve food safety regulations and guarantee secure dining experiences to residents of Toronto."
