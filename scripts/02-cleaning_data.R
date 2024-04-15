@@ -25,9 +25,9 @@ cleaned_DineSafe_data <-
 
 cleaned_DineSafe_data <- cleaned_DineSafe_data[cleaned_DineSafe_data$infraction_details != "", ]
 
-
+DineSafe_data_Clean <- cleaned_DineSafe_data[!is.na(cleaned_DineSafe_data$id), ]
 
 write_csv(
-  x = 
+  x = DineSafe_data_Clean,
   file = "inputs/data/cleaned_DineSafe.csv"
 )
