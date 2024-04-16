@@ -14,27 +14,73 @@ bibliography: bibliography.bib
 
 \newpage
 ## Introduction
-Food safety is a crucial issue in the culinary scene of Toronto compared to other urban regions because it is a home to many restaurants that draw guests and local residents. While the diversity of restaurants in the city is indicative of it being a culturally luring place, concern with food quality and safety is also of equal significance. The food safety inspections, those are done by the officials of the Toronto Public Health department under DineSafe system, have great value as a tool of control over the compliance with health requirements and for protecting the public health. DineSafe represents one of the crucial strong points since the system works through OpenDataToronto which permits for students and researchers that want to learn the food environment of Toronto in more details to have access to such information.
+Food safety is a crucial issue in the culinary scene of Toronto compared to other urban regions because it is a home to many restaurants that draw guests and local residents. While the diversity of restaurants in the city is indicative of it being a culturally luring place, concern with food quality and safety is also of equal significance. The food safety inspections, those are done by the officials of the Toronto Public Health department under DineSafe system [@DineSafe], have great value as a tool of control over the compliance with health requirements and for protecting the public health. DineSafe represents one of the crucial strong points since the system works through OpenDataToronto which permits for students and researchers that want to learn the food environment of Toronto in more details to have access to such information.
 
 This study will investigate the DineSafe data set, mainly focusing on the temporal and spatial trends associated with food safety inspections in different neighborhoods in Toronto. Through studying the trends of food safety compliance across years and locations, we intend to detect the efficiency of existing food safety systems and point out the areas for improvements. Furthermore, we will dig into the factors that may affect the outcome of an inspection, like establishment type, size, and frequency of inspection giving the in-depth picture of the determinants of compliance within the city's food service industry.
 
-With the overarching goal of enhancing food safety standards and fostering transparency within Toronto's dining establishments, this research endeavors to provide evidence-based insights for policymakers, public health officials, and stakeholders. By analyzing the patterns emerging from DineSafe inspections, we aim to contribute to informed decision-making and the development of targeted interventions to address potential gaps in food safety regulation enforcement. Ultimately, our study seeks to promote a culture of accountability and consumer trust, ensuring that Toronto's vibrant culinary landscape remains a safe and enjoyable experience for all.
+With the overarching goal of enhancing food safety standards and fostering transparency within Toronto's dining establishments, this research endeavors to provide evidence-based insights for policymakers, public health officials, and stakeholders. By analyzing the patterns emerging from DineSafe inspections, we aim to contribute to informed decision-making and the development of targeted interventions to address potential gaps in food safety regulation enforcement. Ultimately, our study seeks to promote a culture of accountability and consumer trust, ensuring that Toronto's vibrant culinary landscape remains a safe and enjoyable experience for all. In @sec-data, we will cover the data and methods of analysis that will be used. We will visualize the results in @sec-results, and finally interpret the results in @sec-discussion and draw conclusions to our findings in @sec-conclusion.
 \newpage
-## Data
+
+## Data {#sec-data}
 
 
 ### Data collection and cleaning
-All data collection and analysis was done using statistical computing and data visualization program R [@R] and Rstudio IDE [@RStudioR] to help streamline the workflow. The data used for this paper was found in the opendatatoronto library and downloaded using the R package opendatatoronto [@opendatatorontoR]. All the analysis was done using the R program and the following supporting packages tidyverse [@tidyverseR], Janitor [@JanitorR], dplyer [@dplyrR], ggplot2 [@ggplot2R], knitr [@knitrR], readr [@readrR], and here [@hereR]. We will dive into more detail about the data collection, cleaning, and analysis in the following sections of the paper.
+All data collection and analysis was done using statistical computing and data visualization program R [@R] and Rstudio IDE [@RStudioR] to help streamline the workflow. The data used for this paper was found in the opendatatoronto library and downloaded using the R package opendatatoronto [@opendatatorontoR]. All the analysis was done using the R program and the following supporting packages tidyverse [@tidyverseR], Janitor [@JanitorR], dplyer [@dplyrR], ggplot2 [@ggplot2R], knitr [@knitrR], readr [@readrR], and here [@hereR]. We will dive into more detail about the data collection, cleaning, and analysis in the following sections of the paper. 
 
-## Results
+### Interpreting the data
+Once we had our data, obtained using the opendatatoronto [@opendatatorontoR] R package. From this dataset, we see there are many columns of information. We will be ommiting some information, such as the longitude and latitude of different restaurants, as this information isn't relevant for most people, and using an address is much more practical when finding location. Other information such as establishment status and minimum inspection years are also omitted from this research, as the information they provide are relatively consistent among all establishments. The more important features of the dataset that can be potentially explored such as infraction details and infraction severity, which we will dive more in depth into exploring. Below is a table of all the attributes of the dataset and a brief explanation of each.
 
-## Discussion
+### Variables of interest
+Now that we have a better understanding of the information our dataset is providing us, we can better decide what variables we want to choose to further explore. For the purposes of this paper, we will be investigating infraction details, infraction severity, and establishment type. These variables will show what kind of infractions to food safety most establishments may more commonly commit, and among these different infractions, what kind of infractions are taken most seriously by DineSafe. Another variable that will be the inspection dates, where we will explore trends these inspections over time. Lastly, we will look at the area of establishments where the inspections take place and see if any conclusions can be drawn on hot spots of safety infractions.
 
-### Shortcomings
+\newpage
+
+#### Infraction Types
+During an inspection by DineSafe, an establishment must satisfy the inspectors in the following categories [@foodsafety]:
+
+- Food temperature control
+- Protecting food from contamination
+- Maintenance and sanitation of food contact surfaces and equipment
+- Maintenance and sanitation of non-food contact surfaces and equipment
+- Maintenance and sanitation of washrooms
+- Storage and removal of waste
+- Pest control
+
+Of these regulations, if the restaurant fails to meet any of the above requirements, them they are issued an infraction. Infractions have different levels of severity, which will be covered in the next subsection. Gathering data on this column would let us see what kinds of infractions happen more often than others, indicating what actions might need to be taken to help mitigate further occurrences of the same kind of infraction.
+
+#### Infraction severity
+Of the previously mentioned infractions, infractions are also labelled with a severity based on how bad the infraction is. This is split among three levels of severity, being minor, significant, and crucial infractions [@foodsafety].
+
+**Minor Infractions**
+
+- Pose minimal health risks, such as chefs not wearing hair ties.
+- Can still receive an overall pass in the inspection
+- Infraction must be addressed promptly.
+
+**Significant Infractions**
+
+- Violations that pose more significant health risks, such as dirty food surfaces
+- Can receive a conditional pass, but must resolve the violation within 24-48 hours
+
+**Crucial Infractions**
+
+- Crucial infractions pose major health concerns such as food contamination and lack of safe water
+- Must be dealt with immediately 
+- If left unchecked, the establishment will be issued a closure notice
+
+Using this, we can get a general idea of what types of infractions are given what level of severity. We can use this information to draw on conclusions for what establishments should be aware of and make sure that they don't have any infractions that are considered severe enough to be issued a closure notice.
+
+## Model
+
+## Results {#sec-results}
+
+## Discussion {#sec-discussion}
+
+### Shortcomings and next steps
 
 
 \newpage
-## Conclusion
+## Conclusion {#sec-conclusion}
 
 \newpage
 ## Bibliography
