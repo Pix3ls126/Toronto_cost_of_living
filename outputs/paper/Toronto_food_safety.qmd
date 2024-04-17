@@ -11,6 +11,28 @@ toc: true
 number-sections: true
 bibliography: bibliography.bib
 ---
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#### Work space setup ####
+
+library("janitor")
+library("dplyr")
+library("here")
+library("opendatatoronto")
+library("tidyverse")
+library("knitr")
+library("readr")
+library("arrow")
+library("zoo")
+library("rstanarm")
+
+#### Reading cleaned data ####
+analysis_data <- read_parquet(file = "data/analysis_data/Inspections_fines_per_year.parquet")
+
+```
+\newpa
 
 \newpage
 ## Introduction
@@ -70,7 +92,27 @@ Of the previously mentioned infractions, infractions are also labelled with a se
 
 Using this, we can get a general idea of what types of infractions are given what level of severity. We can use this information to draw on conclusions for what establishments should be aware of and make sure that they don't have any infractions that are considered severe enough to be issued a closure notice.
 
+### Amount Fined
+The final variable of interest that will be explored is to take a look at the amount fined. We will investigate this with relation to the amount of infractions, as well as relate it to the severity of infractions. We expect to see some correlation between the severity of the infraction compared to amount fined, as more the more dangerous the infraction, the more an establishment would be fined due to negligence. 
+
 ## Model
+Here, we will discuss the model used in this analysis. A simple Linear regression model is used where we will compare the the amount establishments are fined for infractions per month, and relate that to the amount of infractions per month.
+
+```{r}
+#| label: fig-1
+#| fig-cap: Amount fined relative to infraction count
+#| echo: false
+#| message: false
+#| warning: false
+
+analysis_data <-
+
+cleaned_Theft_from_Motor_Vehicle |>
+  ggplot(aes(x = division)) +
+  geom_bar() +
+  labs(x = "Police Division #", y = "Number of Motor Thefts", title = 'Number of Motor Thefts per Police Division') +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
 ## Results {#sec-results}
 

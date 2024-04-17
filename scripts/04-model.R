@@ -12,7 +12,7 @@ library(rstanarm)
 library(arrow)
 
 #### Read data ####
-analysis_data <- read_parquet(file = "data/analysis_data/inspections_fines_per_year.parquet")
+analysis_data <- read_parquet(file = "data/analysis_data/Inspections_fines_per_year.parquet")
 
 first_model <- lm(amount_fined ~ Inspection_count, data = analysis_data)
 
