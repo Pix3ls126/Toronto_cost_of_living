@@ -6,9 +6,6 @@
 # Prerequisites: running 01-download_data.R
 
 #### Workspace setup ####
-#install.packages("tidyverse")
-#install.packages("janitor")
-
 library(tidyverse)
 library(janitor)
 library(arrow)
@@ -69,4 +66,4 @@ Infractions_fines_by_date <- merge(Infraction_fines, Inspections_per_year, by = 
 
 Infractions_fines_by_date$amount_fined <- na.fill(Infractions_fines_by_date$amount_fined, 0)
 
-write_parquet(Inspections_per_year, "data/analysis_data/Inspections_fines_per_year.parquet")
+write_parquet(Infractions_fines_by_date, "data/analysis_data/Inspections_fines_per_year.parquet")
