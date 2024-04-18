@@ -66,4 +66,10 @@ Infractions_fines_by_date <- merge(Infraction_fines, Inspections_per_year, by = 
 
 Infractions_fines_by_date$amount_fined <- na.fill(Infractions_fines_by_date$amount_fined, 0)
 
+write_csv(
+  x = Infractions_fines_by_date,
+  file = "data/analysis_data/Inspections_fines_per_year.csv"
+)
+
 write_parquet(Infractions_fines_by_date, "data/analysis_data/Inspections_fines_per_year.parquet")
+
