@@ -18,7 +18,7 @@ simulated_data <-
     # Use 1 through to 18 to represent each division
     "Inspection" = 1:18,
     # Randomly pick an option, with replacement, 151 times
-    "Crime location" = sample(
+    "Severity" = sample(
       x = c("Minor", "Significant", "Minor", "Significant", "Crucial", "Minor"),
       size = 18,
       replace = TRUE
